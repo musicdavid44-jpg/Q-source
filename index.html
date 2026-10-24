@@ -14,7 +14,7 @@
   header a.call { background:var(--accent); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; font-weight:600; }
   .hero { background:linear-gradient(135deg,var(--navy),#2f5a8f); color:#fff; padding:60px 24px; }
   .hero-inner { max-width:960px; margin:0 auto; display:flex; gap:40px; align-items:center; flex-wrap:wrap; justify-content:center; }
-  .photo { width:220px; height:220px; border-radius:50%; background:#cfd8e3 center/cover no-repeat; border:5px solid #fff; flex-shrink:0; display:flex; align-items:center; justify-content:center; color:#5b6b80; font-size:.9rem; text-align:center; }
+  .photo { width:220px; height:220px; border-radius:50%; background:#cfd8e3 url('david.jpg') center/cover no-repeat; border:5px solid #fff; flex-shrink:0; }
   .hero-text { flex:1; min-width:280px; }
   .hero h1 { font-size:2.2rem; line-height:1.2; margin-bottom:12px; }
   .hero p { font-size:1.1rem; margin-bottom:20px; }
@@ -37,6 +37,14 @@
   .contact .phone { font-size:1.8rem; font-weight:700; margin:12px 0; display:block; }
   .price { font-size:2rem; font-weight:700; color:var(--accent); margin:6px 0; }
   .card .incl { font-size:.95rem; color:#556; }
+  .size { margin-top:28px; background:var(--light); border-radius:10px; padding:20px; }
+  .size h3 { color:var(--navy); margin-bottom:10px; font-size:1.2rem; }
+  .size table { width:100%; border-collapse:collapse; font-size:.95rem; }
+  .size th, .size td { text-align:left; padding:8px 10px; border-bottom:1px solid #dde3ea; }
+  .size th { color:var(--navy); }
+  .size .tablewrap { overflow-x:auto; }
+  .size .incl { font-size:.85rem; color:#556; }
+  .note { font-size:.95rem; color:#556; margin-top:12px; }
   footer { background:#16293f; color:#aab6c6; text-align:center; padding:18px; font-size:.9rem; }
 </style>
 </head>
@@ -49,12 +57,12 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <!-- To add your photo: save it as david.jpg next to this file, then change the next line to: <div class="photo" style="background-image:url('david.jpg')"></div> -->
-    <div class="photo">Your photo here</div>
+    <div class="photo" role="img" aria-label="David, owner of Q Home Services"></div>
     <div class="hero-text">
       <h1>One Call. One Invoice. Rent-Ready.</h1>
-      <p>Hi, I'm David. I handle rental turnovers, repairs, and home maintenance across Summit County, so you can get your unit ready and your time back.</p>
+      <p>Hi, I'm David. I handle rental turnovers, service calls, repairs, and general home maintenance across Summit County, so you can get your property ready and your time back.</p>
       <a class="btn" href="tel:3302035588">Get a Free Quote</a>
+      <p style="margin-top:14px;font-size:1rem">Or email <a href="mailto:david@qhomefix.com" style="color:#fff">david@qhomefix.com</a></p>
     </div>
   </div>
 </div>
@@ -66,29 +74,58 @@
     <div class="grid">
       <div class="card"><h3>Walkthrough and Punch List</h3><p>I inspect the unit and send a written list with photos, so nothing gets missed.</p></div>
       <div class="card"><h3>Repairs</h3><p>Wall patching, touch-up paint, caulking, doors, cabinets, hardware, blinds, and smoke detectors. Minor plumbing and electrical fixes too.</p></div>
-      <div class="card"><h3>Flooring</h3><p>Carpet steam cleaning and stretching, plus repair of damaged spots.</p></div>
+      <div class="card"><h3>Flooring</h3><p>LVP and LVT plank and tile flooring installation, plus professional carpet cleaning.</p></div>
       <div class="card"><h3>Cleaning</h3><p>A deep clean so the unit is ready to show.</p></div>
       <div class="card"><h3>Final Check</h3><p>A last walkthrough with photos, so you know it's ready before the next tenant moves in.</p></div>
     </div>
   </div>
 </section>
 
+<section class="alt">
+  <div class="wrap">
+    <h2>Service Calls and General Maintenance</h2>
+    <p class="sub">Not just turnovers. For landlords and homeowners, I'm the one call for repairs big and small, whenever something needs fixing.</p>
+    <div class="grid">
+      <div class="card"><h3>Plumbing Fixes</h3><p>Leaky faucets, running toilets, feed lines, shutoffs, and outdoor faucets.</p></div>
+      <div class="card"><h3>Electrical Fixes</h3><p>Switches, outlets, light fixtures, smoke detectors, and ceiling fans.</p></div>
+      <div class="card"><h3>Doors, Locks and Hardware</h3><p>Loose hinges, sticking doors, lock problems, cabinets, and handrails.</p></div>
+      <div class="card"><h3>Drywall and Paint</h3><p>Holes, cracks, water stains, and touch-up or full-room painting.</p></div>
+      <div class="card"><h3>Exterior and Safety</h3><p>Steps, decks, stair treads, board-ups, and trip hazards.</p></div>
+    </div>
+    <p class="note">Call or text with what's wrong. I'll tell you the cost before I start.</p>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <h2>Turnover Packages</h2>
-    <p class="sub">Flat pricing with paint included, so you know the cost up front.</p>
+    <p class="sub">Packages start at $450. Flat pricing with paint included, so you know the cost up front. Prices below are for units up to 3 bedrooms. Larger units are priced by size, shown underneath.</p>
     <div class="grid">
       <div class="card"><h3>Basic</h3><div class="price">$450</div><p>Light turnover: walkthrough, touch-up paint, caulking, hardware, smoke detectors, and a final check.</p><p class="incl">1 gallon of paint and up to $75 in materials included.</p></div>
       <div class="card"><h3>Standard</h3><div class="price">$1,050</div><p>Everything in Basic, plus wall patching, door and cabinet repairs, minor plumbing and electrical fixes, and carpet cleaning or stretching.</p><p class="incl">Up to 3 gallons of paint and up to $200 in materials included.</p></div>
       <div class="card"><h3>Full</h3><div class="price">$2,400</div><p>Heavy turnover: flooring repair, extensive repairs and paint, and a deep clean.</p><p class="incl">Up to 5 gallons of paint and up to $500 in materials included.</p></div>
     </div>
+
+    <div class="size">
+      <h3>Pricing by Unit Size</h3>
+      <div class="tablewrap">
+        <table>
+          <tr><th>Unit size</th><th>Basic</th><th>Standard</th><th>Full</th></tr>
+          <tr><td>Up to 3 bedrooms</td><td><strong>$450</strong><br><span class="incl">1 gal paint + $75 materials</span></td><td><strong>$1,050</strong><br><span class="incl">3 gal paint + $200 materials</span></td><td><strong>$2,400</strong><br><span class="incl">5 gal paint + $500 materials</span></td></tr>
+          <tr><td>4 bedrooms</td><td><strong>$560</strong><br><span class="incl">2 gal paint + $95 materials</span></td><td><strong>$1,310</strong><br><span class="incl">4 gal paint + $250 materials</span></td><td><strong>$3,000</strong><br><span class="incl">6 gal paint + $625 materials</span></td></tr>
+          <tr><td>5+ bedrooms or multi-level</td><td><strong>From $675</strong><br><span class="incl">2 gal paint + $115 materials</span></td><td><strong>From $1,575</strong><br><span class="incl">5 gal paint + $300 materials</span></td><td><strong>From $3,600</strong><br><span class="incl">8 gal paint + $750 materials</span></td></tr>
+        </table>
+      </div>
+      <p class="note">Paint and material allowances are included in every price above. Larger or unusual properties get a custom quote after a free walkthrough.</p>
+    </div>
+
     <p class="sub" style="margin-top:18px">Materials beyond the included amount are billed at cost plus 25%, and approved by you first.</p>
   </div>
 </section>
 
 <section class="alt">
   <div class="wrap">
-    <h2>Why Landlords Choose Q Home Services</h2>
+    <h2>Why Clients Choose Q Home Services</h2>
     <p class="sub">Less juggling, fewer vacancy days.</p>
     <ul class="why">
       <li><strong>One contact</strong> for the whole turnover, instead of juggling several vendors.</li>
@@ -102,13 +139,14 @@
 <section class="contact">
   <div class="wrap">
     <h2>Let's Get Your Unit Ready</h2>
-    <p>Call or text for a free walkthrough and quote.</p>
+    <p>Call, text, or email for a free walkthrough and quote.</p>
     <a class="phone" href="tel:3302035588">330-203-5588</a>
-    <p>Q Home Services, LLC<br>5246 Wayland Rd, Diamond, OH 44412<br>Proudly serving Summit County</p>
+    <p style="margin-bottom:12px">Email: <a href="mailto:david@qhomefix.com">david@qhomefix.com</a></p>
+    <p>Q Home Services, LLC<br>Proudly serving Summit County</p>
   </div>
 </section>
 
-<footer>&copy; 2026 Q Home Services, LLC. All rights reserved.</footer>
+<footer>&copy; 2026 Q Home Services, LLC. All rights reserved. <span style="opacity:.55">&middot; she tight</span></footer>
 
 </body>
 </html>
